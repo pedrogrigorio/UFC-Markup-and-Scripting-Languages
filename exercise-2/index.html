@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="container">
+  
+  <!-- Um header simples (por enquanto sem navegação real)  -->
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Contato</li>
+        <li>Sobre</li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Conteúdo principal da página dentro da tag main com uma section e um article dentro -->
+  <main class="main_content">
+    <section>
+      <h1 class="title">Pokedex</h1>
+
+      <ul class="list">
+        <!-- Encaminha para o Pokemon anterior na lista da Pokedex, diretamente no site pokemon.com  -->
+        <li>
+          <a href="https://www.pokemon.com/br/pokedex/charmander">Anterior</a>
+        </li>
+
+        <!-- Encaminha para o pokemon atual, diretamente no site pokemon.com  -->
+        <li>
+          <a href="https://www.pokemon.com/br/pokedex/charmeleon">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png" alt="Charmander">
+          </a>
+        </li>
+
+        <!-- Encaminha para o próximo Pokemon na lista da Pokedex, diretamente no site pokemon.com  -->
+        <li>
+          <a href="https://www.pokemon.com/br/pokedex/charizard">Próximo</a>
+        </li>
+      </ul>
+    </section>
+
+    <article class="user_registration">
+      <h2>Cadastro de Usuário</h2>
+
+      <!-- Formulário de cadastro -->
+      <form action="https://www.w3schools.com/action_page.php" method="GET">
+        <label for="name">Nome Completo</label>
+        <input type="text" id="name" name="name" maxlength="15" required>
+        <br>
+        
+        <!-- Alterei o range de números pedido para fazer sentido no meu caso -->
+        <label for="numeric">Idade</label>
+        <input type="number" id="numeric" name="numeric" min="0" max="150" required>
+        <br>
+        
+        <label>Gênero</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Masculino</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Feminino</label>
+        <br>
+        
+        <label for="subscribe">Deseja receber emails?</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <br>
+
+        <!-- Sim, aqui o usuário não tem direito a escolher outro pokemon inicial, por que todo mundo sabe que o Charmander é o melhor 😎 -->
+        <br>
+        <label for="readonly">Pokemon inicial favorito</label>
+        <input type="text" id="readonly" name="readonly" value="Charmander" readonly>
+        <br>
+
+        <input type="submit" value="Cadastrar">
+      </form>
+    </article>
+  </main>
+
+  <!-- Footer simples -->
+  <footer class="footer">
+    <p>© 2023 Nenhum direito reservado 😎👍</p>
+  </footer>
+</body>
+
+</html>
